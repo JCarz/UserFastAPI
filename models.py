@@ -8,7 +8,7 @@ class Gender(str,Enum):
     male = "male"
     female = "female"
 
-class Roles(str,Enum):
+class Role(str,Enum):
     admin = "admin"
     user = "user"
     student = "student"
@@ -20,4 +20,10 @@ class User (BaseModel):
     l_name: str
     m_name: Optional[str]
     gender: Gender 
-    roles: List[Roles] 
+    roles: List[Role] 
+
+class UserUpdateRequest(BaseModel):
+    f_name: Optional[str]
+    l_name: Optional[str]
+    m_name: Optional[str]
+    roles: Optional[List[Role]]
