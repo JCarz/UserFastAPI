@@ -56,4 +56,16 @@ There are different sets of paths:
 Must be created in 
 REST client and formated in JSON properties. No need for id it is generated. 
 
+Put Method works best with the client but you need to get the server running grab a user ID from the DB. Create the request and user the body tab use the UserModel to help fill the body of the user you would like to change:
+{
+    "f_name": "str",
+    "l_name": "str",
+    "m_name": "str",
+    "gender": "str",
+    "roles": [
+      "admin","user","student"
+    ]
+  }
+
+
 
